@@ -1,0 +1,225 @@
+diff --git a/src/net/minecraft/src/Block.java b/src/net/minecraft/src/Block.java
+index f87a84c..9b3b62d 100644
+--- a/src/net/minecraft/src/Block.java
++++ b/src/net/minecraft/src/Block.java
+@@ -115,6 +115,14 @@ public class Block {
+ 	public static final Block redstoneRepeaterIdle = (new BlockRedstoneRepeater(93, false)).setHardness(0.0F).setStepSound(soundWoodFootstep).setBlockName("diode");
+ 	public static final Block redstoneRepeaterActive = (new BlockRedstoneRepeater(94, true)).setHardness(0.0F).setLightValue(10.0F / 16.0F).setStepSound(soundWoodFootstep).setBlockName("diode");
+ 	public static final Block lockedChest = (new BlockLockedChest(95)).setHardness(0.0F).setLightValue(1.0F).setStepSound(soundWoodFootstep).setBlockName("lockedchest").setTickOnLoad(true);
++	public static final Block fclightbulbOff = (new BlockFCLightBulb(222, 49)).setHardness(0.4F).setStepSound(soundGlassFootstep).setBlockName("fclightbulb");
++	public static final Block fclightbulbOn = (new BlockFCLightBulb(223, 23)).setLightValue(1.0F).setHardness(0.4F).setStepSound(soundGlassFootstep).setBlockName("fclightbulb");
++	public static final Block fcbbq = (new BlockFCBBQ(224)).setHardness(0.4F).setStepSound(soundStoneFootstep).setBlockName("fcbbq");
++	public static final Block fcminecartboosterIdle = (new BlockFCMinecartBooster(225, 22)).setHardness(0.4F).setResistance(10.0F).setStepSound(soundMetalFootstep).setBlockName("fcminecartbooster");
++	public static final Block fcminecartboosterActive = (new BlockFCMinecartBooster(226, 22)).setHardness(0.4F).setResistance(10.0F).setStepSound(soundMetalFootstep).setBlockName("fcminecartbooster");
++	public static final Block fcMinecartPressurePlate = (new BlockFCMinecartPressurePlate(227, 22)).setHardness(0.4F).setResistance(10.0F).setStepSound(soundMetalFootstep).setBlockName("fcminecartpressureplate");
++	public static final Block cementMoving = (new BlockFlowing(228, Material.cement)).setHardness(100.0F).setLightOpacity(255).setBlockName("cement");
++	public static final Block cementStill = (new BlockStationary(229, Material.cement)).setHardness(100.0F).setLightOpacity(255).setBlockName("cement");
+ 	public int blockIndexInTexture;
+ 	public final int blockID;
+ 	protected float blockHardness;
+diff --git a/src/net/minecraft/src/BlockFire.java b/src/net/minecraft/src/BlockFire.java
+index 7e45467..917df1d 100644
+--- a/src/net/minecraft/src/BlockFire.java
++++ b/src/net/minecraft/src/BlockFire.java
+@@ -47,7 +47,18 @@ public class BlockFire extends Block {
+ 	}
+ 
+ 	public void updateTick(World world, int i, int j, int k, Random random) {
+-		boolean var6 = world.getBlockId(i, j - 1, k) == Block.bloodStone.blockID;
++		int sourceBlockID = world.getBlockId(i, j - 1, k);
++		boolean bIsBBQ = sourceBlockID == Block.fcbbq.blockID;
++		boolean flag;
++		if(bIsBBQ) {
++			flag = ((BlockFCBBQ)Block.fcbbq).IsBBQLit(world, i, j - 1, k);
++			if(!flag) {
++				world.setBlockWithNotify(i, j, k, 0);
++				return;
++			}
++		}
++
++		flag = sourceBlockID == Block.bloodStone.blockID | bIsBBQ;
+ 		int l = world.getBlockMetadata(i, j, k);
+ 		if(l < 15) {
+ 			world.setBlockMetadataWithNotify(i, j, k, l + 1);
+diff --git a/src/net/minecraft/src/BlockFlowing.java b/src/net/minecraft/src/BlockFlowing.java
+index da748ba..563fe46 100644
+--- a/src/net/minecraft/src/BlockFlowing.java
++++ b/src/net/minecraft/src/BlockFlowing.java
+@@ -7,8 +7,12 @@ public class BlockFlowing extends BlockFluids {
+ 	boolean[] isOptimalFlowDirection = new boolean[4];
+ 	int[] flowCost = new int[4];
+ 
+-	protected BlockFlowing(int var1, Material var2) {
+-		super(var1, var2);
++	protected BlockFlowing(int i, Material material) {
++		super(i, material);
++		if(material == Material.cement) {
++			this.setTickOnLoad(true);
++		}
++
+ 	}
+ 
+ 	private void func_22034_j(World world, int i, int j, int k) {
+@@ -62,19 +66,26 @@ public class BlockFlowing extends BlockFluids {
+ 			}
+ 
+ 			if(k1 != l) {
+-				l = k1;
+-				if(k1 < 0) {
+-					world.setBlockWithNotify(i, j, k, 0);
++				if(this.blockMaterial != Material.cement || k1 <= l && k1 >= 0) {
++					l = k1;
++					if(k1 < 0) {
++						world.setBlockWithNotify(i, j, k, 0);
++					} else {
++						world.setBlockMetadataWithNotify(i, j, k, k1);
++						world.scheduleBlockUpdate(i, j, k, this.blockID, this.tickRate());
++						world.notifyBlocksOfNeighborChange(i, j, k, this.blockID);
++					}
+ 				} else {
+-					world.setBlockMetadataWithNotify(i, j, k, k1);
+-					world.scheduleBlockUpdate(i, j, k, this.blockID, this.tickRate());
+-					world.notifyBlocksOfNeighborChange(i, j, k, this.blockID);
++					world.setBlockWithNotify(i, j, k, Block.stone.blockID);
+ 				}
+ 			} else if(flag) {
+ 				this.func_22034_j(world, i, j, k);
+ 			}
+ 		} else {
+ 			this.func_22034_j(world, i, j, k);
++			if(l == 0 && this.blockMaterial == Material.cement && !world.isBlockIndirectlyGettingPowered(i, j, k)) {
++				world.setBlockWithNotify(i, j, k, Block.stone.blockID);
++			}
+ 		}
+ 
+ 		if(this.liquidCanDisplaceBlock(world, i, j - 1, k)) {
+diff --git a/src/net/minecraft/src/CraftingManager.java b/src/net/minecraft/src/CraftingManager.java
+index 1f1c85c..308a79a 100644
+--- a/src/net/minecraft/src/CraftingManager.java
++++ b/src/net/minecraft/src/CraftingManager.java
+@@ -72,6 +72,57 @@ public class CraftingManager {
+ 		this.addRecipe(new ItemStack(Block.pressurePlatePlanks, 1), new Object[]{"##", Character.valueOf('#'), Block.planks});
+ 		this.addRecipe(new ItemStack(Block.dispenser, 1), new Object[]{"###", "#X#", "#R#", Character.valueOf('#'), Block.cobblestone, Character.valueOf('X'), Item.bow, Character.valueOf('R'), Item.redstone});
+ 		this.addRecipe(new ItemStack(Item.bed, 1), new Object[]{"###", "XXX", Character.valueOf('#'), Block.cloth, Character.valueOf('X'), Block.planks});
++
++		this.addRecipe(new ItemStack(Block.fclightbulbOff, 1),
++				new Object[]{
++						" # ",
++						"#X#",
++						" Y ",
++						Character.valueOf('#'), Block.glass,
++						Character.valueOf('X'), Item.lightStoneDust,
++						Character.valueOf('Y'), Item.redstone});
++
++		this.addRecipe(
++				new ItemStack(Block.fcbbq),
++				new Object[]{
++						"#X#",
++						"#Z#",
++						"#Y#",
++						Character.valueOf('#'), Item.ingotIron,
++						Character.valueOf('X'), Block.bloodStone,
++						Character.valueOf('Y'), Item.redstone,
++						Character.valueOf('Z'), Item.flint});
++
++		this.addRecipe(new ItemStack(Block.fcminecartboosterIdle),
++				new Object[]{
++						"#Y#",
++						"# #",
++						"#X#",
++						Character.valueOf('#'), Item.ingotIron,
++						Character.valueOf('X'), Item.redstone,
++						Character.valueOf('Y'), Block.slowSand});
++
++		this.addRecipe(
++				new ItemStack(Block.fcMinecartPressurePlate),
++				new Object[]{
++						"#Y#",
++						"# #",
++						"#X#",
++						Character.valueOf('#'), Item.ingotIron,
++						Character.valueOf('X'), Item.redstone,
++						Character.valueOf('Y'), Block.pressurePlateStone});
++
++		this.addRecipe(
++				new ItemStack(Item.bucketCement, 1),
++				new Object[]{
++						"   ",
++						"#YX",
++						" Z ",
++						Character.valueOf('#'), Item.slimeBall,
++						Character.valueOf('X'), Block.gravel,
++						Character.valueOf('Y'), Item.bucketWater,
++						Character.valueOf('Z'), Item.bucketEmpty});
++
+ 		Collections.sort(this.recipes, new RecipeSorter(this));
+ 		System.out.println(this.recipes.size() + " recipes");
+ 	}
+diff --git a/src/net/minecraft/src/EntityMinecart.java b/src/net/minecraft/src/EntityMinecart.java
+index d1047c5..90c12b5 100644
+--- a/src/net/minecraft/src/EntityMinecart.java
++++ b/src/net/minecraft/src/EntityMinecart.java
+@@ -180,6 +180,11 @@ public class EntityMinecart extends Entity implements IInventory {
+ 			double d2 = 0.4D;
+ 			boolean flag = false;
+ 			d5 = 1.0D / 128.0D;
++			int iBlockBellowId = this.worldObj.getBlockId(i, j - 1, k);
++			if(iBlockBellowId == Block.fcMinecartPressurePlate.blockID) {
++				((BlockFCMinecartPressurePlate)Block.fcMinecartPressurePlate).OnMinecartOver(this.worldObj, i, j - 1, k);
++			}
++
+ 			if(this.worldObj.getBlockId(i, j, k) == Block.minecartTrack.blockID) {
+ 				Vec3D d6 = this.func_514_g(this.posX, this.posY, this.posZ);
+ 				int l = this.worldObj.getBlockMetadata(i, j, k);
+@@ -273,7 +278,17 @@ public class EntityMinecart extends Entity implements IInventory {
+ 					this.setPosition(this.posX, this.posY + (double)d7[1][1], this.posZ);
+ 				}
+ 
+-				if(this.riddenByEntity != null) {
++				if(iBlockBellowId == Block.fcminecartboosterActive.blockID) {
++					this.motionX *= 1.35D;
++					this.motionY *= 0.0D;
++					this.motionZ *= 1.35D;
++					((BlockFCMinecartBooster)Block.fcminecartboosterActive).OnMinecartOver(this.worldObj, i, j - 1, k);
++				} else if(iBlockBellowId == Block.fcminecartboosterIdle.blockID) {
++					this.motionX *= 0.5D;
++					this.motionY *= 0.0D;
++					this.motionZ *= 0.5D;
++					((BlockFCMinecartBooster)Block.fcminecartboosterIdle).OnMinecartOver(this.worldObj, i, j - 1, k);
++				} else if(this.riddenByEntity != null) {
+ 					this.motionX *= (double)0.997F;
+ 					this.motionY *= 0.0D;
+ 					this.motionZ *= (double)0.997F;
+diff --git a/src/net/minecraft/src/Material.java b/src/net/minecraft/src/Material.java
+index 1a542e9..2c26b6b 100644
+--- a/src/net/minecraft/src/Material.java
++++ b/src/net/minecraft/src/Material.java
+@@ -26,6 +26,7 @@ public class Material {
+ 	public static final Material pumpkin = new Material();
+ 	public static final Material portal = new Material();
+ 	public static final Material cakeMaterial = new Material();
++	public static final Material cement = new MaterialLiquid();
+ 	private boolean canBurn;
+ 
+ 	public boolean getIsLiquid() {
+diff --git a/src/net/minecraft/src/World.java b/src/net/minecraft/src/World.java
+index 7af9ffc..f166cf6 100644
+--- a/src/net/minecraft/src/World.java
++++ b/src/net/minecraft/src/World.java
+@@ -1807,13 +1807,9 @@ public class World implements IBlockAccess {
+ 		return this.isBlockProvidingPowerTo(i, j - 1, k, 0) ? true : (this.isBlockProvidingPowerTo(i, j + 1, k, 1) ? true : (this.isBlockProvidingPowerTo(i, j, k - 1, 2) ? true : (this.isBlockProvidingPowerTo(i, j, k + 1, 3) ? true : (this.isBlockProvidingPowerTo(i - 1, j, k, 4) ? true : this.isBlockProvidingPowerTo(i + 1, j, k, 5)))));
+ 	}
+ 
+-	public boolean isBlockIndirectlyProvidingPowerTo(int var1, int var2, int var3, int var4) {
+-		if(this.isBlockOpaqueCube(var1, var2, var3)) {
+-			return this.isBlockGettingPowered(var1, var2, var3);
+-		} else {
+-			int var5 = this.getBlockId(var1, var2, var3);
+-			return var5 == 0 ? false : Block.blocksList[var5].isPoweringTo(this, var1, var2, var3, var4);
+-		}
++	public boolean isBlockIndirectlyProvidingPowerTo(int i, int j, int k, int l) {
++		int i1 = this.getBlockId(i, j, k);
++		return this.isBlockOpaqueCube(i, j, k) && i1 != Block.fcMinecartPressurePlate.blockID ? this.isBlockGettingPowered(i, j, k) : (i1 == 0 ? false : Block.blocksList[i1].isPoweringTo(this, i, j, k, l));
+ 	}
+ 
+ 	public boolean isBlockIndirectlyGettingPowered(int i, int j, int k) {
