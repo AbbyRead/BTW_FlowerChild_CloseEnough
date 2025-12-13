@@ -23,7 +23,7 @@ index 7e45467..917df1d 100644
 +++ b/src/net/minecraft/src/BlockFire.java
 @@ -47,7 +47,18 @@ public class BlockFire extends Block {
  	}
- 
+
  	public void updateTick(World world, int i, int j, int k, Random random) {
 -		boolean var6 = world.getBlockId(i, j - 1, k) == Block.bloodStone.blockID;
 +		int sourceBlockID = world.getBlockId(i, j - 1, k);
@@ -48,7 +48,7 @@ index da748ba..563fe46 100644
 @@ -7,8 +7,12 @@ public class BlockFlowing extends BlockFluids {
  	boolean[] isOptimalFlowDirection = new boolean[4];
  	int[] flowCost = new int[4];
- 
+
 -	protected BlockFlowing(int var1, Material var2) {
 -		super(var1, var2);
 +	protected BlockFlowing(int i, Material material) {
@@ -58,11 +58,11 @@ index da748ba..563fe46 100644
 +		}
 +
  	}
- 
+
  	private void func_22034_j(World world, int i, int j, int k) {
 @@ -62,19 +66,26 @@ public class BlockFlowing extends BlockFluids {
  			}
- 
+
  			if(k1 != l) {
 -				l = k1;
 -				if(k1 < 0) {
@@ -91,7 +91,7 @@ index da748ba..563fe46 100644
 +				world.setBlockWithNotify(i, j, k, Block.stone.blockID);
 +			}
  		}
- 
+
  		if(this.liquidCanDisplaceBlock(world, i, j - 1, k)) {
 diff --git a/src/net/minecraft/src/CraftingManager.java b/src/net/minecraft/src/CraftingManager.java
 index 1f1c85c..308a79a 100644
@@ -174,7 +174,7 @@ index d1047c5..90c12b5 100644
 @@ -273,7 +278,17 @@ public class EntityMinecart extends Entity implements IInventory {
  					this.setPosition(this.posX, this.posY + (double)d7[1][1], this.posZ);
  				}
- 
+
 -				if(this.riddenByEntity != null) {
 +				if(iBlockBellowId == Block.fcminecartboosterActive.blockID) {
 +					this.motionX *= 1.35D;
@@ -200,7 +200,7 @@ index 1a542e9..2c26b6b 100644
  	public static final Material cakeMaterial = new Material();
 +	public static final Material cement = new MaterialLiquid();
  	private boolean canBurn;
- 
+
  	public boolean getIsLiquid() {
 diff --git a/src/net/minecraft/src/World.java b/src/net/minecraft/src/World.java
 index 7af9ffc..f166cf6 100644

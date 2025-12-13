@@ -1,4 +1,4 @@
-package io.github.abbyread.fcce.events.init;
+package ar.fcce.events.init;
 
 import net.mine_diver.unsafeevents.listener.EventListener;
 import net.modificationstation.stationapi.api.event.mod.InitEvent;
