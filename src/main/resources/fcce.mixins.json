@@ -1,9 +1,10 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "io.github.abbyread.fcce.mixin",
+  "package": "ar.fcce.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "FireBlockMixin"
   ],
   "server": [
   ],

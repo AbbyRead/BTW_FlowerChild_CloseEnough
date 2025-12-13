@@ -6,22 +6,28 @@
   "name": "Better Than Wolves: FlowerChild (Close Enough)",
   "description": "This is an attempt to port the original Better Than Wolves releases to community-supported versions of Minecraft, using good coding practices hopefully.",
   "authors": [
-    "Me!"
+    "Abigail Read"
   ],
   "contact": {
-    "homepage": "https://glass-launcher.net/",
-    "sources": "https://github.com/calmilamsy/stationapi-example-mod"
+    "homepage": "https://github.com/AbbyRead/BTW_FlowerChild_CloseEnough",
+    "sources": "https://github.com/AbbyRead/BTW_FlowerChild_CloseEnough",
+    "issues": "https://github.com/AbbyRead/BTW_FlowerChild_CloseEnough/issues"
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/fcce/BTW Basic Flag Icon.png",
+  "icon": "assets/fcce/BTW_Icon_Circle_512x512.png",
 
   "environment": "*",
+
   "entrypoints": {
     "stationapi:event_bus": [
-      "ar.fcce.events.init.InitListener"
+      "ar.fcce.FCCE",
+      "ar.fcce.FCCEBlocks",
+      "ar.fcce.FCCERecipes",
+      "ar.fcce.FCCEFireBurnable"
     ],
     "stationapi:event_bus_client": [
+      "ar.fcce.FCCETextures"
     ],
     "stationapi:event_bus_server": [
     ]
