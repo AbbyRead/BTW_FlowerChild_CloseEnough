@@ -1,0 +1,227 @@
+
+------------------------------
+
+RECIPE: "Minecart Booster" Block
+
+  [ I | S | I ]
+  [ I |   | I ]
+  [ I | R | I ]
+
+  I = Iron Ingot
+  R = Redstone
+  S = Soul Sand
+
+  Source: mod_FCBetterThanWolves.java
+  Code: addRecipe [modloader](
+  new ItemStack(fcMinecartBoosterIdle),
+    new Object[]{
+        "#Y#",
+        "# #",
+        "#X#",
+        Character.valueOf('#'),
+        Item.ingotIron,
+        Character.valueOf('X'),
+        Item.redstone,
+        Character.valueOf('Y'),
+        Block.slowSand
+    }
+  );
+
+------------------------------
+
+RECIPE: "Minecart Plate" Block (Iron)
+
+  [ I | P | I ]
+  [ I |   | I ]
+  [ I | R | I ]
+
+  I = Iron Ingot
+  R = Redstone
+  P = Pressure Plate (Iron)
+
+  Source: mod_FCBetterThanWolves.java
+  Code: addRecipe [modloader](
+  new ItemStack(fcMinecartPressurePlateIron),
+    new Object[]{
+        "#Y#",
+        "# #",
+        "#X#",
+        Character.valueOf('#'),
+        Item.ingotIron,
+        Character.valueOf('X'),
+        Item.redstone,
+        Character.valueOf('Y'),
+        fcPressurePlateIron
+    }
+  );
+
+------------------------------
+
+RECIPE: "Minecart Plate" Block (Stone)
+
+  [ I | P | I ]
+  [ I |   | I ]
+  [ I | R | I ]
+
+  I = Iron Ingot
+  R = Redstone
+  P = Pressure Plate (Stone)
+
+  Source: mod_FCBetterThanWolves.java
+  Code: addRecipe [modloader](
+  new ItemStack(fcMinecartPressurePlateStone),
+    new Object[]{
+        "#Y#",
+        "# #",
+        "#X#",
+        Character.valueOf('#'),
+        Item.ingotIron,
+        Character.valueOf('X'),
+        Item.redstone,
+        Character.valueOf('Y'),
+        Block.pressurePlateStone
+    }
+  );
+
+------------------------------
+
+RECIPE: "Minecart Plate" Block (Wood)
+
+  [ I | P | I ]
+  [ I |   | I ]
+  [ I | R | I ]
+
+  I = Iron Ingot
+  R = Redstone
+  P = Pressure Plate (Wood)
+
+  Source: mod_FCBetterThanWolves.java
+  Code: addRecipe [modloader](
+  new ItemStack(fcMinecartPressurePlateWood),
+    new Object[]{
+        "#Y#",
+        "# #",
+        "#X#",
+        Character.valueOf('#'),
+        Item.ingotIron,
+        Character.valueOf('X'),
+        Item.redstone,
+        Character.valueOf('Y'),
+        Block.pressurePlatePlanks
+    }
+  );
+
+------------------------------
+
+RECIPE: Cement Bucket
+
+  [   |   |   ]
+  [ S | W | G ]
+  [   | B |   ]
+
+  S = Slimeball
+  G = Gravel
+  W = Water Bucket
+  B = Bucket
+
+  Source: mod_FCBetterThanWolves.java
+  Code: addRecipe [modloader](
+  new ItemStack(FCItemBucketCement.fcBucketCement,
+    1),
+    new Object[]{
+        "   ",
+        "#YX",
+        " Z ",
+        Character.valueOf('#'),
+        Item.slimeBall,
+        Character.valueOf('X'),
+        Block.gravel,
+        Character.valueOf('Y'),
+        Item.bucketWater,
+        Character.valueOf('Z'),
+        Item.bucketEmpty
+    }
+  );
+
+------------------------------
+
+RECIPE: Hibachi
+
+  [ I | N | I ]
+  [ I | F | I ]
+  [ I | R | I ]
+
+  I = Iron Ingot
+  N = Netherrack
+  R = Redstone
+  F = Flint
+
+  Source: mod_FCBetterThanWolves.java
+  Code: addRecipe [modloader](
+  new ItemStack(fcBBQ),
+    new Object[]{
+        "#X#",
+        "#Z#",
+        "#Y#",
+        Character.valueOf('#'),
+        Item.ingotIron,
+        Character.valueOf('X'),
+        Block.bloodStone,
+        Character.valueOf('Y'),
+        Item.redstone,
+        Character.valueOf('Z'),
+        Item.flint
+    }
+  );
+
+------------------------------
+
+RECIPE: Light Block
+
+  [   | G |   ]
+  [ G | L | G ]
+  [   | R |   ]
+
+  G = Glass
+  L = Glowstone Dust
+  R = Redstone
+
+  Source: mod_FCBetterThanWolves.java
+  Code: addRecipe [modloader](
+  new ItemStack(fcLightBulbOff,
+    1),
+    new Object[]{
+        " # ",
+        "#X#",
+        " Y ",
+        Character.valueOf('#'),
+        Block.glass,
+        Character.valueOf('X'),
+        Item.lightStoneDust,
+        Character.valueOf('Y'),
+        Item.redstone
+    }
+  );
+
+------------------------------
+
+RECIPE: Pressure Plate (Iron)
+
+  [ I | I |   ]
+  [   |   |   ]
+  [   |   |   ]
+
+  I = Iron Ingot
+
+  Source: mod_FCBetterThanWolves.java
+  Code: addRecipe [modloader](
+  new ItemStack(fcPressurePlateIron,
+    1),
+    new Object[]{
+        "##",
+        Character.valueOf('#'),
+        Item.ingotIron
+    }
+  );
+
+------------------------------

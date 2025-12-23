@@ -1,0 +1,64 @@
+
+------------------------------
+
+RECIPE: "Light Bulb" Block
+
+  [   | G |   ]
+  [ G | L | G ]
+  [   | R |   ]
+
+  G = Glass
+  L = Glowstone Dust
+  R = Redstone
+
+------------------------------
+
+RECIPE: "Minecart Booster" Block
+
+  [ I | S | I ]
+  [ I |   | I ]
+  [ I | R | I ]
+
+  I = Iron Ingot
+  R = Redstone
+  S = Soul Sand
+
+------------------------------
+
+RECIPE: "Minecart Pressure Plate" Block
+
+  [ I | P | I ]
+  [ I |   | I ]
+  [ I | R | I ]
+
+  I = Iron Ingot
+  R = Redstone
+  P = Pressure Plate (Stone)
+
+------------------------------
+
+RECIPE: Cement Bucket
+
+  [   |   |   ]
+  [ S | W | G ]
+  [   | B |   ]
+
+  S = Slimeball
+  G = Gravel
+  W = Water Bucket
+  B = Bucket
+
+------------------------------
+
+RECIPE: Hibachi
+
+  [ I | N | I ]
+  [ I | F | I ]
+  [ I | R | I ]
+
+  I = Iron Ingot
+  N = Netherrack
+  R = Redstone
+  F = Flint
+
+------------------------------

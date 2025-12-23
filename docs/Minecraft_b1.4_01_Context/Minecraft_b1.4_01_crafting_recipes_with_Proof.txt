@@ -1,0 +1,1790 @@
+CRAFTING RECIPES
+=========================
+
+SHAPED RECIPES (56)
+-------------------------
+
+RECIPE: Arrow x4
+
+  [ F |   |   ]
+  [ S |   |   ]
+  [ E |   |   ]
+
+  E = Feather
+  F = Flint
+  S = Stick
+
+  Source: RecipesWeapons.java
+  Code: addRecipe(
+  new ItemStack(Item.arrow,
+    4),
+    new Object[]{
+        "X",
+        "#",
+        "Y",
+        Character.valueOf('Y'),
+        Item.feather,
+        Character.valueOf('X'),
+        Item.flint,
+        Character.valueOf('#'),
+        Item.stick
+    }
+  );
+
+------------------------------
+
+RECIPE: Bed
+
+  [ W | W | W ]
+  [ O | O | O ]
+  [   |   |   ]
+
+  W = Wool
+  O = Wooden Planks
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Item.bed,
+    1),
+    new Object[]{
+        "###",
+        "XXX",
+        Character.valueOf('#'),
+        Block.cloth,
+        Character.valueOf('X'),
+        Block.planks
+    }
+  );
+
+------------------------------
+
+RECIPE: Boat
+
+  [ W |   | W ]
+  [ W | W | W ]
+  [   |   |   ]
+
+  W = Wooden Planks
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Item.boat,
+    1),
+    new Object[]{
+        "# #",
+        "###",
+        Character.valueOf('#'),
+        Block.planks
+    }
+  );
+
+------------------------------
+
+RECIPE: Book
+
+  [ P |   |   ]
+  [ P |   |   ]
+  [ P |   |   ]
+
+  P = Paper
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Item.book,
+    1),
+    new Object[]{
+        "#",
+        "#",
+        "#",
+        Character.valueOf('#'),
+        Item.paper
+    }
+  );
+
+------------------------------
+
+RECIPE: Bookshelf
+
+  [ W | W | W ]
+  [ B | B | B ]
+  [ W | W | W ]
+
+  W = Wooden Planks
+  B = Book
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Block.bookShelf,
+    1),
+    new Object[]{
+        "###",
+        "XXX",
+        "###",
+        Character.valueOf('#'),
+        Block.planks,
+        Character.valueOf('X'),
+        Item.book
+    }
+  );
+
+------------------------------
+
+RECIPE: Bow
+
+  [   | S | T ]
+  [ S |   | T ]
+  [   | S | T ]
+
+  T = String
+  S = Stick
+
+  Source: RecipesWeapons.java
+  Code: addRecipe(
+  new ItemStack(Item.bow,
+    1),
+    new Object[]{
+        " #X",
+        "# X",
+        " #X",
+        Character.valueOf('X'),
+        Item.silk,
+        Character.valueOf('#'),
+        Item.stick
+    }
+  );
+
+------------------------------
+
+RECIPE: Bowl x4
+
+  [ W |   | W ]
+  [   | W |   ]
+  [   |   |   ]
+
+  W = Wooden Planks
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Item.bowlEmpty,
+    4),
+    new Object[]{
+        "# #",
+        " # ",
+        Character.valueOf('#'),
+        Block.planks
+    }
+  );
+
+------------------------------
+
+RECIPE: Bread
+
+  [ W | W | W ]
+  [   |   |   ]
+  [   |   |   ]
+
+  W = Wheat
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Item.bread,
+    1),
+    new Object[]{
+        "###",
+        Character.valueOf('#'),
+        Item.wheat
+    }
+  );
+
+------------------------------
+
+RECIPE: Brick Block
+
+  [ B | B |   ]
+  [ B | B |   ]
+  [   |   |   ]
+
+  B = Brick
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Block.brick,
+    1),
+    new Object[]{
+        "##",
+        "##",
+        Character.valueOf('#'),
+        Item.brick
+    }
+  );
+
+------------------------------
+
+RECIPE: Bucket
+
+  [ I |   | I ]
+  [   | I |   ]
+  [   |   |   ]
+
+  I = Iron Ingot
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Item.bucketEmpty,
+    1),
+    new Object[]{
+        "# #",
+        " # ",
+        Character.valueOf('#'),
+        Item.ingotIron
+    }
+  );
+
+------------------------------
+
+RECIPE: Button
+
+  [ S |   |   ]
+  [ S |   |   ]
+  [   |   |   ]
+
+  S = Stone
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Block.button,
+    1),
+    new Object[]{
+        "#",
+        "#",
+        Character.valueOf('#'),
+        Block.stone
+    }
+  );
+
+------------------------------
+
+RECIPE: Cake
+
+  [ M | M | M ]
+  [ S | E | S ]
+  [ W | W | W ]
+
+  M = Milk Bucket
+  S = Sugar
+  W = Wheat
+  E = Egg
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Item.cake,
+    1),
+    new Object[]{
+        "AAA",
+        "BEB",
+        "CCC",
+        Character.valueOf('A'),
+        Item.bucketMilk,
+        Character.valueOf('B'),
+        Item.sugar,
+        Character.valueOf('C'),
+        Item.wheat,
+        Character.valueOf('E'),
+        Item.egg
+    }
+  );
+
+------------------------------
+
+RECIPE: Chest
+
+  [ W | W | W ]
+  [ W |   | W ]
+  [ W | W | W ]
+
+  W = Wooden Planks
+
+  Source: RecipesCrafting.java
+  Code: addRecipe(
+  new ItemStack(Block.crate),
+    new Object[]{
+        "###",
+        "# #",
+        "###",
+        Character.valueOf('#'),
+        Block.planks
+    }
+  );
+
+------------------------------
+
+RECIPE: Chest Minecart
+
+  [ C |   |   ]
+  [ M |   |   ]
+  [   |   |   ]
+
+  C = Chest
+  M = Minecart
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Item.minecartCrate,
+    1),
+    new Object[]{
+        "A",
+        "B",
+        Character.valueOf('A'),
+        Block.crate,
+        Character.valueOf('B'),
+        Item.minecartEmpty
+    }
+  );
+
+------------------------------
+
+RECIPE: Clay Block
+
+  [ C | C |   ]
+  [ C | C |   ]
+  [   |   |   ]
+
+  C = Clay
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Block.blockClay,
+    1),
+    new Object[]{
+        "##",
+        "##",
+        Character.valueOf('#'),
+        Item.clay
+    }
+  );
+
+------------------------------
+
+RECIPE: Clock
+
+  [   | G |   ]
+  [ G | R | G ]
+  [   | G |   ]
+
+  G = Gold Ingot
+  R = Redstone
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Item.pocketSundial,
+    1),
+    new Object[]{
+        " # ",
+        "#X#",
+        " # ",
+        Character.valueOf('#'),
+        Item.ingotGold,
+        Character.valueOf('X'),
+        Item.redstone
+    }
+  );
+
+------------------------------
+
+RECIPE: Cobblestone Stairs x4
+
+  [ C |   |   ]
+  [ C | C |   ]
+  [ C | C | C ]
+
+  C = Cobblestone
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Block.stairCompactCobblestone,
+    4),
+    new Object[]{
+        "#  ",
+        "## ",
+        "###",
+        Character.valueOf('#'),
+        Block.cobblestone
+    }
+  );
+
+------------------------------
+
+RECIPE: Compass
+
+  [   | I |   ]
+  [ I | R | I ]
+  [   | I |   ]
+
+  I = Iron Ingot
+  R = Redstone
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Item.compass,
+    1),
+    new Object[]{
+        " # ",
+        "#X#",
+        " # ",
+        Character.valueOf('#'),
+        Item.ingotIron,
+        Character.valueOf('X'),
+        Item.redstone
+    }
+  );
+
+------------------------------
+
+RECIPE: Cookie x8
+
+  [ W | D | W ]
+  [   |   |   ]
+  [   |   |   ]
+
+  D = Dye
+  W = Wheat
+
+  Source: RecipesFood.java
+  Code: addRecipe(
+  new ItemStack(Item.cookie,
+    8),
+    new Object[]{
+        "#X#",
+        Character.valueOf('X'),
+        new ItemStack(Item.dyePowder,
+    1,
+    3),
+        Character.valueOf('#'),
+        Item.wheat
+    }
+  );
+
+------------------------------
+
+RECIPE: Crafting Table
+
+  [ W | W |   ]
+  [ W | W |   ]
+  [   |   |   ]
+
+  W = Wooden Planks
+
+  Source: RecipesCrafting.java
+  Code: addRecipe(
+  new ItemStack(Block.workbench),
+    new Object[]{
+        "##",
+        "##",
+        Character.valueOf('#'),
+        Block.planks
+    }
+  );
+
+------------------------------
+
+RECIPE: Dispenser
+
+  [ C | C | C ]
+  [ C | B | C ]
+  [ C | R | C ]
+
+  C = Cobblestone
+  B = Bow
+  R = Redstone
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Block.dispenser,
+    1),
+    new Object[]{
+        "###",
+        "#X#",
+        "#R#",
+        Character.valueOf('#'),
+        Block.cobblestone,
+        Character.valueOf('X'),
+        Item.bow,
+        Character.valueOf('R'),
+        Item.redstone
+    }
+  );
+
+------------------------------
+
+RECIPE: Fence x2
+
+  [ S | S | S ]
+  [ S | S | S ]
+  [   |   |   ]
+
+  S = Stick
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Block.fence,
+    2),
+    new Object[]{
+        "###",
+        "###",
+        Character.valueOf('#'),
+        Item.stick
+    }
+  );
+
+------------------------------
+
+RECIPE: Fishing Rod
+
+  [   |   | S ]
+  [   | S | T ]
+  [ S |   | T ]
+
+  S = Stick
+  T = String
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Item.fishingRod,
+    1),
+    new Object[]{
+        "  #",
+        " #X",
+        "# X",
+        Character.valueOf('#'),
+        Item.stick,
+        Character.valueOf('X'),
+        Item.silk
+    }
+  );
+
+------------------------------
+
+RECIPE: Flint and Steel
+
+  [ I |   |   ]
+  [   | F |   ]
+  [   |   |   ]
+
+  I = Iron Ingot
+  F = Flint
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Item.flintAndSteel,
+    1),
+    new Object[]{
+        "A ",
+        " B",
+        Character.valueOf('A'),
+        Item.ingotIron,
+        Character.valueOf('B'),
+        Item.flint
+    }
+  );
+
+------------------------------
+
+RECIPE: Furnace
+
+  [ C | C | C ]
+  [ C |   | C ]
+  [ C | C | C ]
+
+  C = Cobblestone
+
+  Source: RecipesCrafting.java
+  Code: addRecipe(
+  new ItemStack(Block.stoneOvenIdle),
+    new Object[]{
+        "###",
+        "# #",
+        "###",
+        Character.valueOf('#'),
+        Block.cobblestone
+    }
+  );
+
+------------------------------
+
+RECIPE: Glowstone
+
+  [ G | G | G ]
+  [ G | G | G ]
+  [ G | G | G ]
+
+  G = Glowstone Dust
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Block.lightStone,
+    1),
+    new Object[]{
+        "###",
+        "###",
+        "###",
+        Character.valueOf('#'),
+        Item.lightStoneDust
+    }
+  );
+
+------------------------------
+
+RECIPE: Golden Apple
+
+  [ B | B | B ]
+  [ B | A | B ]
+  [ B | B | B ]
+
+  B = Block of Gold
+  A = Apple
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Item.appleGold,
+    1),
+    new Object[]{
+        "###",
+        "#X#",
+        "###",
+        Character.valueOf('#'),
+        Block.blockGold,
+        Character.valueOf('X'),
+        Item.appleRed
+    }
+  );
+
+------------------------------
+
+RECIPE: Iron Door
+
+  [ I | I |   ]
+  [ I | I |   ]
+  [ I | I |   ]
+
+  I = Iron Ingot
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Item.doorSteel,
+    1),
+    new Object[]{
+        "##",
+        "##",
+        "##",
+        Character.valueOf('#'),
+        Item.ingotIron
+    }
+  );
+
+------------------------------
+
+RECIPE: Jack o'Lantern
+
+  [ P |   |   ]
+  [ T |   |   ]
+  [   |   |   ]
+
+  P = Pumpkin
+  T = Torch
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Block.pumpkinLantern,
+    1),
+    new Object[]{
+        "A",
+        "B",
+        Character.valueOf('A'),
+        Block.pumpkin,
+        Character.valueOf('B'),
+        Block.torchWood
+    }
+  );
+
+------------------------------
+
+RECIPE: Jukebox
+
+  [ W | W | W ]
+  [ W | D | W ]
+  [ W | W | W ]
+
+  W = Wooden Planks
+  D = Diamond
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Block.jukebox,
+    1),
+    new Object[]{
+        "###",
+        "#X#",
+        "###",
+        Character.valueOf('#'),
+        Block.planks,
+        Character.valueOf('X'),
+        Item.diamond
+    }
+  );
+
+------------------------------
+
+RECIPE: Ladder
+
+  [ S |   | S ]
+  [ S | S | S ]
+  [ S |   | S ]
+
+  S = Stick
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Block.ladder,
+    1),
+    new Object[]{
+        "# #",
+        "###",
+        "# #",
+        Character.valueOf('#'),
+        Item.stick
+    }
+  );
+
+------------------------------
+
+RECIPE: Lever
+
+  [ S |   |   ]
+  [ C |   |   ]
+  [   |   |   ]
+
+  C = Cobblestone
+  S = Stick
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Block.lever,
+    1),
+    new Object[]{
+        "X",
+        "#",
+        Character.valueOf('#'),
+        Block.cobblestone,
+        Character.valueOf('X'),
+        Item.stick
+    }
+  );
+
+------------------------------
+
+RECIPE: Minecart
+
+  [ I |   | I ]
+  [ I | I | I ]
+  [   |   |   ]
+
+  I = Iron Ingot
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Item.minecartEmpty,
+    1),
+    new Object[]{
+        "# #",
+        "###",
+        Character.valueOf('#'),
+        Item.ingotIron
+    }
+  );
+
+------------------------------
+
+RECIPE: Mushroom Stew
+
+  [ R |   |   ]
+  [ B |   |   ]
+  [ O |   |   ]
+
+  B = Brown Mushroom
+  R = Red Mushroom
+  O = Bowl
+
+  Source: RecipesFood.java
+  Code: addRecipe(
+  new ItemStack(Item.bowlSoup),
+    new Object[]{
+        "Y",
+        "X",
+        "#",
+        Character.valueOf('X'),
+        Block.mushroomBrown,
+        Character.valueOf('Y'),
+        Block.mushroomRed,
+        Character.valueOf('#'),
+        Item.bowlEmpty
+    }
+  );
+
+------------------------------
+
+RECIPE: Mushroom Stew
+
+  [ B |   |   ]
+  [ R |   |   ]
+  [ O |   |   ]
+
+  R = Red Mushroom
+  B = Brown Mushroom
+  O = Bowl
+
+  Source: RecipesFood.java
+  Code: addRecipe(
+  new ItemStack(Item.bowlSoup),
+    new Object[]{
+        "Y",
+        "X",
+        "#",
+        Character.valueOf('X'),
+        Block.mushroomRed,
+        Character.valueOf('Y'),
+        Block.mushroomBrown,
+        Character.valueOf('#'),
+        Item.bowlEmpty
+    }
+  );
+
+------------------------------
+
+RECIPE: Note Block
+
+  [ W | W | W ]
+  [ W | R | W ]
+  [ W | W | W ]
+
+  W = Wooden Planks
+  R = Redstone
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Block.musicBlock,
+    1),
+    new Object[]{
+        "###",
+        "#X#",
+        "###",
+        Character.valueOf('#'),
+        Block.planks,
+        Character.valueOf('X'),
+        Item.redstone
+    }
+  );
+
+------------------------------
+
+RECIPE: Painting
+
+  [ S | S | S ]
+  [ S | W | S ]
+  [ S | S | S ]
+
+  S = Stick
+  W = Wool
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Item.painting,
+    1),
+    new Object[]{
+        "###",
+        "#X#",
+        "###",
+        Character.valueOf('#'),
+        Item.stick,
+        Character.valueOf('X'),
+        Block.cloth
+    }
+  );
+
+------------------------------
+
+RECIPE: Paper x3
+
+  [ S | S | S ]
+  [   |   |   ]
+  [   |   |   ]
+
+  S = Sugar Cane
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Item.paper,
+    3),
+    new Object[]{
+        "###",
+        Character.valueOf('#'),
+        Item.reed
+    }
+  );
+
+------------------------------
+
+RECIPE: Powered Minecart
+
+  [ F |   |   ]
+  [ M |   |   ]
+  [   |   |   ]
+
+  F = Furnace
+  M = Minecart
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Item.minecartPowered,
+    1),
+    new Object[]{
+        "A",
+        "B",
+        Character.valueOf('A'),
+        Block.stoneOvenIdle,
+        Character.valueOf('B'),
+        Item.minecartEmpty
+    }
+  );
+
+------------------------------
+
+RECIPE: Pressure Plate (Stone)
+
+  [ S | S |   ]
+  [   |   |   ]
+  [   |   |   ]
+
+  S = Stone
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Block.pressurePlateStone,
+    1),
+    new Object[]{
+        "##",
+        Character.valueOf('#'),
+        Block.stone
+    }
+  );
+
+------------------------------
+
+RECIPE: Pressure Plate (Wood)
+
+  [ W | W |   ]
+  [   |   |   ]
+  [   |   |   ]
+
+  W = Wooden Planks
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Block.pressurePlatePlanks,
+    1),
+    new Object[]{
+        "##",
+        Character.valueOf('#'),
+        Block.planks
+    }
+  );
+
+------------------------------
+
+RECIPE: Rail x16
+
+  [ I |   | I ]
+  [ I | S | I ]
+  [ I |   | I ]
+
+  I = Iron Ingot
+  S = Stick
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Block.minecartTrack,
+    16),
+    new Object[]{
+        "X X",
+        "X#X",
+        "X X",
+        Character.valueOf('X'),
+        Item.ingotIron,
+        Character.valueOf('#'),
+        Item.stick
+    }
+  );
+
+------------------------------
+
+RECIPE: Redstone Repeater
+
+  [ R | E | R ]
+  [ S | S | S ]
+  [   |   |   ]
+
+  R = Redstone Torch
+  E = Redstone
+  S = Stone
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Item.redstoneRepeater,
+    1),
+    new Object[]{
+        "#X#",
+        "III",
+        Character.valueOf('#'),
+        Block.torchRedstoneActive,
+        Character.valueOf('X'),
+        Item.redstone,
+        Character.valueOf('I'),
+        Block.stone
+    }
+  );
+
+------------------------------
+
+RECIPE: Redstone Torch
+
+  [ R |   |   ]
+  [ S |   |   ]
+  [   |   |   ]
+
+  S = Stick
+  R = Redstone
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Block.torchRedstoneActive,
+    1),
+    new Object[]{
+        "X",
+        "#",
+        Character.valueOf('#'),
+        Item.stick,
+        Character.valueOf('X'),
+        Item.redstone
+    }
+  );
+
+------------------------------
+
+RECIPE: Sandstone
+
+  [ S | S |   ]
+  [ S | S |   ]
+  [   |   |   ]
+
+  S = Sand
+
+  Source: RecipesCrafting.java
+  Code: addRecipe(
+  new ItemStack(Block.sandStone),
+    new Object[]{
+        "##",
+        "##",
+        Character.valueOf('#'),
+        Block.sand
+    }
+  );
+
+------------------------------
+
+RECIPE: Sign
+
+  [ W | W | W ]
+  [ W | W | W ]
+  [   | S |   ]
+
+  W = Wooden Planks
+  S = Stick
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Item.sign,
+    1),
+    new Object[]{
+        "###",
+        "###",
+        " X ",
+        Character.valueOf('#'),
+        Block.planks,
+        Character.valueOf('X'),
+        Item.stick
+    }
+  );
+
+------------------------------
+
+RECIPE: Snow Block
+
+  [ S | S |   ]
+  [ S | S |   ]
+  [   |   |   ]
+
+  S = Snowball
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Block.blockSnow,
+    1),
+    new Object[]{
+        "##",
+        "##",
+        Character.valueOf('#'),
+        Item.snowball
+    }
+  );
+
+------------------------------
+
+RECIPE: Stick x4
+
+  [ W |   |   ]
+  [ W |   |   ]
+  [   |   |   ]
+
+  W = Wooden Planks
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Item.stick,
+    4),
+    new Object[]{
+        "#",
+        "#",
+        Character.valueOf('#'),
+        Block.planks
+    }
+  );
+
+------------------------------
+
+RECIPE: Sugar
+
+  [ S |   |   ]
+  [   |   |   ]
+  [   |   |   ]
+
+  S = Sugar Cane
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Item.sugar,
+    1),
+    new Object[]{
+        "#",
+        Character.valueOf('#'),
+        Item.reed
+    }
+  );
+
+------------------------------
+
+RECIPE: TNT
+
+  [ G | S | G ]
+  [ S | G | S ]
+  [ G | S | G ]
+
+  G = Gunpowder
+  S = Sand
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Block.tnt,
+    1),
+    new Object[]{
+        "X#X",
+        "#X#",
+        "X#X",
+        Character.valueOf('X'),
+        Item.gunpowder,
+        Character.valueOf('#'),
+        Block.sand
+    }
+  );
+
+------------------------------
+
+RECIPE: Torch x4
+
+  [ C |   |   ]
+  [ S |   |   ]
+  [   |   |   ]
+
+  C = Coal
+  S = Stick
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Block.torchWood,
+    4),
+    new Object[]{
+        "X",
+        "#",
+        Character.valueOf('X'),
+        Item.coal,
+        Character.valueOf('#'),
+        Item.stick
+    }
+  );
+
+------------------------------
+
+RECIPE: Torch x4
+
+  [ C |   |   ]
+  [ S |   |   ]
+  [   |   |   ]
+
+  C = Coal
+  S = Stick
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Block.torchWood,
+    4),
+    new Object[]{
+        "X",
+        "#",
+        Character.valueOf('X'),
+        new ItemStack(Item.coal,
+    1,
+    1),
+        Character.valueOf('#'),
+        Item.stick
+    }
+  );
+
+------------------------------
+
+RECIPE: Wooden Door
+
+  [ W | W |   ]
+  [ W | W |   ]
+  [ W | W |   ]
+
+  W = Wooden Planks
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Item.doorWood,
+    1),
+    new Object[]{
+        "##",
+        "##",
+        "##",
+        Character.valueOf('#'),
+        Block.planks
+    }
+  );
+
+------------------------------
+
+RECIPE: Wooden Planks x4
+
+  [ L |   |   ]
+  [   |   |   ]
+  [   |   |   ]
+
+  L = Log
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Block.planks,
+    4),
+    new Object[]{
+        "#",
+        Character.valueOf('#'),
+        Block.wood
+    }
+  );
+
+------------------------------
+
+RECIPE: Wooden Stairs x4
+
+  [ W |   |   ]
+  [ W | W |   ]
+  [ W | W | W ]
+
+  W = Wooden Planks
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Block.stairCompactPlanks,
+    4),
+    new Object[]{
+        "#  ",
+        "## ",
+        "###",
+        Character.valueOf('#'),
+        Block.planks
+    }
+  );
+
+------------------------------
+
+RECIPE: Wool
+
+  [ S | S | S ]
+  [ S | S | S ]
+  [ S | S | S ]
+
+  S = String
+
+  Source: CraftingManager.java
+  Code: addRecipe(
+  new ItemStack(Block.cloth,
+    1),
+    new Object[]{
+        "###",
+        "###",
+        "###",
+        Character.valueOf('#'),
+        Item.silk
+    }
+  );
+
+=========================
+
+SHAPELESS RECIPES (16)
+-------------------------
+
+RECIPE: Cyan Dye x2
+Ingredients (shapeless - any order):
+  • Blue Dye
+  • Green Dye
+
+  Source: RecipesDyes.java
+  Code:
+      new ItemStack(Item.dyePowder,
+        2,
+        6),
+        new Object[]{
+            new ItemStack(Item.dyePowder,
+        1,
+        4),
+            new ItemStack(Item.dyePowder,
+        1,
+        2)
+        }
+
+------------------------------
+
+RECIPE: Gray Dye x2
+Ingredients (shapeless - any order):
+  • Black Dye
+  • White Dye
+
+  Source: RecipesDyes.java
+  Code:
+      new ItemStack(Item.dyePowder,
+        2,
+        8),
+        new Object[]{
+            new ItemStack(Item.dyePowder,
+        1,
+        0),
+            new ItemStack(Item.dyePowder,
+        1,
+        15)
+        }
+
+------------------------------
+
+RECIPE: Light Blue Dye x2
+Ingredients (shapeless - any order):
+  • Blue Dye
+  • White Dye
+
+  Source: RecipesDyes.java
+  Code:
+      new ItemStack(Item.dyePowder,
+        2,
+        12),
+        new Object[]{
+            new ItemStack(Item.dyePowder,
+        1,
+        4),
+            new ItemStack(Item.dyePowder,
+        1,
+        15)
+        }
+
+------------------------------
+
+RECIPE: Light Gray Dye x2
+Ingredients (shapeless - any order):
+  • Gray Dye
+  • White Dye
+
+  Source: RecipesDyes.java
+  Code:
+      new ItemStack(Item.dyePowder,
+        2,
+        7),
+        new Object[]{
+            new ItemStack(Item.dyePowder,
+        1,
+        8),
+            new ItemStack(Item.dyePowder,
+        1,
+        15)
+        }
+
+------------------------------
+
+RECIPE: Light Gray Dye x3
+Ingredients (shapeless - any order):
+  • Black Dye
+  • White Dye
+  • White Dye
+
+  Source: RecipesDyes.java
+  Code:
+      new ItemStack(Item.dyePowder,
+        3,
+        7),
+        new Object[]{
+            new ItemStack(Item.dyePowder,
+        1,
+        0),
+            new ItemStack(Item.dyePowder,
+        1,
+        15),
+            new ItemStack(Item.dyePowder,
+        1,
+        15)
+        }
+
+------------------------------
+
+RECIPE: Lime Dye x2
+Ingredients (shapeless - any order):
+  • Green Dye
+  • White Dye
+
+  Source: RecipesDyes.java
+  Code:
+      new ItemStack(Item.dyePowder,
+        2,
+        10),
+        new Object[]{
+            new ItemStack(Item.dyePowder,
+        1,
+        2),
+            new ItemStack(Item.dyePowder,
+        1,
+        15)
+        }
+
+------------------------------
+
+RECIPE: Magenta Dye x2
+Ingredients (shapeless - any order):
+  • Purple Dye
+  • Pink Dye
+
+  Source: RecipesDyes.java
+  Code:
+      new ItemStack(Item.dyePowder,
+        2,
+        13),
+        new Object[]{
+            new ItemStack(Item.dyePowder,
+        1,
+        5),
+            new ItemStack(Item.dyePowder,
+        1,
+        9)
+        }
+
+------------------------------
+
+RECIPE: Magenta Dye x3
+Ingredients (shapeless - any order):
+  • Blue Dye
+  • Red Dye
+  • Pink Dye
+
+  Source: RecipesDyes.java
+  Code:
+      new ItemStack(Item.dyePowder,
+        3,
+        13),
+        new Object[]{
+            new ItemStack(Item.dyePowder,
+        1,
+        4),
+            new ItemStack(Item.dyePowder,
+        1,
+        1),
+            new ItemStack(Item.dyePowder,
+        1,
+        9)
+        }
+
+------------------------------
+
+RECIPE: Magenta Dye x4
+Ingredients (shapeless - any order):
+  • Blue Dye
+  • Red Dye
+  • Red Dye
+  • White Dye
+
+  Source: RecipesDyes.java
+  Code:
+      new ItemStack(Item.dyePowder,
+        4,
+        13),
+        new Object[]{
+            new ItemStack(Item.dyePowder,
+        1,
+        4),
+            new ItemStack(Item.dyePowder,
+        1,
+        1),
+            new ItemStack(Item.dyePowder,
+        1,
+        1),
+            new ItemStack(Item.dyePowder,
+        1,
+        15)
+        }
+
+------------------------------
+
+RECIPE: Orange Dye x2
+Ingredients (shapeless - any order):
+  • Red Dye
+  • Yellow Dye
+
+  Source: RecipesDyes.java
+  Code:
+      new ItemStack(Item.dyePowder,
+        2,
+        14),
+        new Object[]{
+            new ItemStack(Item.dyePowder,
+        1,
+        1),
+            new ItemStack(Item.dyePowder,
+        1,
+        11)
+        }
+
+------------------------------
+
+RECIPE: Pink Dye x2
+Ingredients (shapeless - any order):
+  • Red Dye
+  • White Dye
+
+  Source: RecipesDyes.java
+  Code:
+      new ItemStack(Item.dyePowder,
+        2,
+        9),
+        new Object[]{
+            new ItemStack(Item.dyePowder,
+        1,
+        1),
+            new ItemStack(Item.dyePowder,
+        1,
+        15)
+        }
+
+------------------------------
+
+RECIPE: Purple Dye x2
+Ingredients (shapeless - any order):
+  • Blue Dye
+  • Red Dye
+
+  Source: RecipesDyes.java
+  Code:
+      new ItemStack(Item.dyePowder,
+        2,
+        5),
+        new Object[]{
+            new ItemStack(Item.dyePowder,
+        1,
+        4),
+            new ItemStack(Item.dyePowder,
+        1,
+        1)
+        }
+
+------------------------------
+
+RECIPE: Red Dye x2
+Ingredients (shapeless - any order):
+  • Rose
+
+  Source: RecipesDyes.java
+  Code:
+      new ItemStack(Item.dyePowder,
+        2,
+        1),
+        new Object[]{
+            Block.plantRed
+        }
+
+------------------------------
+
+RECIPE: White Dye x3
+Ingredients (shapeless - any order):
+  • Bone
+
+  Source: RecipesDyes.java
+  Code:
+      new ItemStack(Item.dyePowder,
+        3,
+        15),
+        new Object[]{
+            Item.bone
+        }
+
+------------------------------
+
+RECIPE: Wool (Dyed)
+Ingredients (shapeless - any order):
+  • Wool
+  • Dye
+
+  Source: RecipesDyes.java
+  Code:
+      new ItemStack(Block.cloth,
+        1,
+            BlockCloth.func_21035_d(var2)),
+        new Object[]{
+            new ItemStack(Item.dyePowder,
+        1,
+            var2),
+            new ItemStack(Item.itemsList[Block.cloth.blockID],
+        1,
+        0)
+        }
+
+------------------------------
+
+RECIPE: Yellow Dye x2
+Ingredients (shapeless - any order):
+  • Dandelion
+
+  Source: RecipesDyes.java
+  Code:
+      new ItemStack(Item.dyePowder,
+        2,
+        11),
+        new Object[]{
+            Block.plantYellow
+        }
+
+=========================
+
+SMELTING RECIPES (10)
+-------------------------
+
+SMELTING: Clay → Brick
+
+  Source: FurnaceRecipes.java
+  Code:
+      addSmelting(Item.clay.shiftedIndex,
+            new ItemStack(Item.brick))
+
+------------------------------
+
+SMELTING: Log → Coal
+
+  Source: FurnaceRecipes.java
+  Code:
+      addSmelting(Block.wood.blockID,
+            new ItemStack(Item.coal))
+
+------------------------------
+
+SMELTING: Raw Fish → Cooked Fish
+
+  Source: FurnaceRecipes.java
+  Code:
+      addSmelting(Item.fishRaw.shiftedIndex,
+            new ItemStack(Item.fishCooked))
+
+------------------------------
+
+SMELTING: Raw Porkchop → Cooked Porkchop
+
+  Source: FurnaceRecipes.java
+  Code:
+      addSmelting(Item.porkRaw.shiftedIndex,
+            new ItemStack(Item.porkCooked))
+
+------------------------------
+
+SMELTING: Diamond Ore → Diamond
+
+  Source: FurnaceRecipes.java
+  Code:
+      addSmelting(Block.oreDiamond.blockID,
+            new ItemStack(Item.diamond))
+
+------------------------------
+
+SMELTING: Cactus → Dye
+
+  Source: FurnaceRecipes.java
+  Code:
+      addSmelting(Block.cactus.blockID,
+            new ItemStack(Item.dyePowder))
+
+------------------------------
+
+SMELTING: Sand → Glass
+
+  Source: FurnaceRecipes.java
+  Code:
+      addSmelting(Block.sand.blockID,
+            new ItemStack(Block.glass))
+
+------------------------------
+
+SMELTING: Gold Ore → Gold Ingot
+
+  Source: FurnaceRecipes.java
+  Code:
+      addSmelting(Block.oreGold.blockID,
+            new ItemStack(Item.ingotGold))
+
+------------------------------
+
+SMELTING: Iron Ore → Iron Ingot
+
+  Source: FurnaceRecipes.java
+  Code:
+      addSmelting(Block.oreIron.blockID,
+            new ItemStack(Item.ingotIron))
+
+------------------------------
+
+SMELTING: Cobblestone → Stone
+
+  Source: FurnaceRecipes.java
+  Code:
+      addSmelting(Block.cobblestone.blockID,
+            new ItemStack(Block.stone))
+
+=========================

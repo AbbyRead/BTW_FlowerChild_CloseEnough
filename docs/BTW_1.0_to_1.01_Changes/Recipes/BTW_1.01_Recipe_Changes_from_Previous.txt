@@ -1,0 +1,61 @@
+
+------------------------------
+
+RECIPE: Light Block (Called "Light Bulb" in BTW 1.0)
+
+  [   | G |   ]
+  [ G | L | G ]
+  [   | R |   ]
+
+  G = Glass
+  L = Glowstone Dust
+  R = Redstone
+
+------------------------------
+
+RECIPE: "Minecart Plate" Block (Stone)
+Note: Was called "Minecart Pressure Plate" in BTW 1.0
+
+  [ I | P | I ]
+  [ I |   | I ]
+  [ I | R | I ]
+
+  I = Iron Ingot
+  R = Redstone
+  P = Pressure Plate (Stone)
+
+------------------------------
+
+RECIPE: "Minecart Plate" Block (Iron)
+
+  [ I | P | I ]
+  [ I |   | I ]
+  [ I | R | I ]
+
+  I = Iron Ingot
+  R = Redstone
+  P = Pressure Plate (Iron)
+
+------------------------------
+
+RECIPE: "Minecart Plate" Block (Wood)
+
+  [ I | P | I ]
+  [ I |   | I ]
+  [ I | R | I ]
+
+  I = Iron Ingot
+  R = Redstone
+  P = Pressure Plate (Wood)
+
+------------------------------
+
+RECIPE: Pressure Plate (Iron)
+
+  [ I | I |   ]
+  [   |   |   ]
+  [   |   |   ]
+
+  I = Iron Ingot
+
+------------------------------

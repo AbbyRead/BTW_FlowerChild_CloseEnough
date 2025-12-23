@@ -1,0 +1,759 @@
+CRAFTING RECIPES
+=========================
+
+SHAPED RECIPES (56)
+-------------------------
+
+RECIPE: Arrow x4
+
+  [ F |   |   ]
+  [ S |   |   ]
+  [ E |   |   ]
+
+  E = Feather
+  F = Flint
+  S = Stick
+
+------------------------------
+
+RECIPE: Bed
+
+  [ W | W | W ]
+  [ O | O | O ]
+  [   |   |   ]
+
+  W = Wool
+  O = Wooden Planks
+
+------------------------------
+
+RECIPE: Boat
+
+  [ W |   | W ]
+  [ W | W | W ]
+  [   |   |   ]
+
+  W = Wooden Planks
+
+------------------------------
+
+RECIPE: Book
+
+  [ P |   |   ]
+  [ P |   |   ]
+  [ P |   |   ]
+
+  P = Paper
+
+------------------------------
+
+RECIPE: Bookshelf
+
+  [ W | W | W ]
+  [ B | B | B ]
+  [ W | W | W ]
+
+  W = Wooden Planks
+  B = Book
+
+------------------------------
+
+RECIPE: Bow
+
+  [   | S | T ]
+  [ S |   | T ]
+  [   | S | T ]
+
+  T = String
+  S = Stick
+
+------------------------------
+
+RECIPE: Bowl x4
+
+  [ W |   | W ]
+  [   | W |   ]
+  [   |   |   ]
+
+  W = Wooden Planks
+
+------------------------------
+
+RECIPE: Bread
+
+  [ W | W | W ]
+  [   |   |   ]
+  [   |   |   ]
+
+  W = Wheat
+
+------------------------------
+
+RECIPE: Brick Block
+
+  [ B | B |   ]
+  [ B | B |   ]
+  [   |   |   ]
+
+  B = Brick
+
+------------------------------
+
+RECIPE: Bucket
+
+  [ I |   | I ]
+  [   | I |   ]
+  [   |   |   ]
+
+  I = Iron Ingot
+
+------------------------------
+
+RECIPE: Button
+
+  [ S |   |   ]
+  [ S |   |   ]
+  [   |   |   ]
+
+  S = Stone
+
+------------------------------
+
+RECIPE: Cake
+
+  [ M | M | M ]
+  [ S | E | S ]
+  [ W | W | W ]
+
+  M = Milk Bucket
+  S = Sugar
+  W = Wheat
+  E = Egg
+
+------------------------------
+
+RECIPE: Chest
+
+  [ W | W | W ]
+  [ W |   | W ]
+  [ W | W | W ]
+
+  W = Wooden Planks
+
+------------------------------
+
+RECIPE: Chest Minecart
+
+  [ C |   |   ]
+  [ M |   |   ]
+  [   |   |   ]
+
+  C = Chest
+  M = Minecart
+
+------------------------------
+
+RECIPE: Clay Block
+
+  [ C | C |   ]
+  [ C | C |   ]
+  [   |   |   ]
+
+  C = Clay
+
+------------------------------
+
+RECIPE: Clock
+
+  [   | G |   ]
+  [ G | R | G ]
+  [   | G |   ]
+
+  G = Gold Ingot
+  R = Redstone
+
+------------------------------
+
+RECIPE: Cobblestone Stairs x4
+
+  [ C |   |   ]
+  [ C | C |   ]
+  [ C | C | C ]
+
+  C = Cobblestone
+
+------------------------------
+
+RECIPE: Compass
+
+  [   | I |   ]
+  [ I | R | I ]
+  [   | I |   ]
+
+  I = Iron Ingot
+  R = Redstone
+
+------------------------------
+
+RECIPE: Cookie x8
+
+  [ W | D | W ]
+  [   |   |   ]
+  [   |   |   ]
+
+  D = Dye
+  W = Wheat
+
+------------------------------
+
+RECIPE: Crafting Table
+
+  [ W | W |   ]
+  [ W | W |   ]
+  [   |   |   ]
+
+  W = Wooden Planks
+
+------------------------------
+
+RECIPE: Dispenser
+
+  [ C | C | C ]
+  [ C | B | C ]
+  [ C | R | C ]
+
+  C = Cobblestone
+  B = Bow
+  R = Redstone
+
+------------------------------
+
+RECIPE: Fence x2
+
+  [ S | S | S ]
+  [ S | S | S ]
+  [   |   |   ]
+
+  S = Stick
+
+------------------------------
+
+RECIPE: Fishing Rod
+
+  [   |   | S ]
+  [   | S | T ]
+  [ S |   | T ]
+
+  S = Stick
+  T = String
+
+------------------------------
+
+RECIPE: Flint and Steel
+
+  [ I |   |   ]
+  [   | F |   ]
+  [   |   |   ]
+
+  I = Iron Ingot
+  F = Flint
+
+------------------------------
+
+RECIPE: Furnace
+
+  [ C | C | C ]
+  [ C |   | C ]
+  [ C | C | C ]
+
+  C = Cobblestone
+
+------------------------------
+
+RECIPE: Glowstone
+
+  [ G | G | G ]
+  [ G | G | G ]
+  [ G | G | G ]
+
+  G = Glowstone Dust
+
+------------------------------
+
+RECIPE: Golden Apple
+
+  [ B | B | B ]
+  [ B | A | B ]
+  [ B | B | B ]
+
+  B = Block of Gold
+  A = Apple
+
+------------------------------
+
+RECIPE: Iron Door
+
+  [ I | I |   ]
+  [ I | I |   ]
+  [ I | I |   ]
+
+  I = Iron Ingot
+
+------------------------------
+
+RECIPE: Jack o'Lantern
+
+  [ P |   |   ]
+  [ T |   |   ]
+  [   |   |   ]
+
+  P = Pumpkin
+  T = Torch
+
+------------------------------
+
+RECIPE: Jukebox
+
+  [ W | W | W ]
+  [ W | D | W ]
+  [ W | W | W ]
+
+  W = Wooden Planks
+  D = Diamond
+
+------------------------------
+
+RECIPE: Ladder
+
+  [ S |   | S ]
+  [ S | S | S ]
+  [ S |   | S ]
+
+  S = Stick
+
+------------------------------
+
+RECIPE: Lever
+
+  [ S |   |   ]
+  [ C |   |   ]
+  [   |   |   ]
+
+  C = Cobblestone
+  S = Stick
+
+------------------------------
+
+RECIPE: Minecart
+
+  [ I |   | I ]
+  [ I | I | I ]
+  [   |   |   ]
+
+  I = Iron Ingot
+
+------------------------------
+
+RECIPE: Mushroom Stew
+
+  [ R |   |   ]
+  [ B |   |   ]
+  [ O |   |   ]
+
+  B = Brown Mushroom
+  R = Red Mushroom
+  O = Bowl
+
+------------------------------
+
+RECIPE: Mushroom Stew
+
+  [ B |   |   ]
+  [ R |   |   ]
+  [ O |   |   ]
+
+  R = Red Mushroom
+  B = Brown Mushroom
+  O = Bowl
+
+------------------------------
+
+RECIPE: Note Block
+
+  [ W | W | W ]
+  [ W | R | W ]
+  [ W | W | W ]
+
+  W = Wooden Planks
+  R = Redstone
+
+------------------------------
+
+RECIPE: Painting
+
+  [ S | S | S ]
+  [ S | W | S ]
+  [ S | S | S ]
+
+  S = Stick
+  W = Wool
+
+------------------------------
+
+RECIPE: Paper x3
+
+  [ S | S | S ]
+  [   |   |   ]
+  [   |   |   ]
+
+  S = Sugar Cane
+
+------------------------------
+
+RECIPE: Powered Minecart
+
+  [ F |   |   ]
+  [ M |   |   ]
+  [   |   |   ]
+
+  F = Furnace
+  M = Minecart
+
+------------------------------
+
+RECIPE: Pressure Plate (Stone)
+
+  [ S | S |   ]
+  [   |   |   ]
+  [   |   |   ]
+
+  S = Stone
+
+------------------------------
+
+RECIPE: Pressure Plate (Wood)
+
+  [ W | W |   ]
+  [   |   |   ]
+  [   |   |   ]
+
+  W = Wooden Planks
+
+------------------------------
+
+RECIPE: Rail x16
+
+  [ I |   | I ]
+  [ I | S | I ]
+  [ I |   | I ]
+
+  I = Iron Ingot
+  S = Stick
+
+------------------------------
+
+RECIPE: Redstone Repeater
+
+  [ R | E | R ]
+  [ S | S | S ]
+  [   |   |   ]
+
+  R = Redstone Torch
+  E = Redstone
+  S = Stone
+
+------------------------------
+
+RECIPE: Redstone Torch
+
+  [ R |   |   ]
+  [ S |   |   ]
+  [   |   |   ]
+
+  S = Stick
+  R = Redstone
+
+------------------------------
+
+RECIPE: Sandstone
+
+  [ S | S |   ]
+  [ S | S |   ]
+  [   |   |   ]
+
+  S = Sand
+
+------------------------------
+
+RECIPE: Sign
+
+  [ W | W | W ]
+  [ W | W | W ]
+  [   | S |   ]
+
+  W = Wooden Planks
+  S = Stick
+
+------------------------------
+
+RECIPE: Snow Block
+
+  [ S | S |   ]
+  [ S | S |   ]
+  [   |   |   ]
+
+  S = Snowball
+
+------------------------------
+
+RECIPE: Stick x4
+
+  [ W |   |   ]
+  [ W |   |   ]
+  [   |   |   ]
+
+  W = Wooden Planks
+
+------------------------------
+
+RECIPE: Sugar
+
+  [ S |   |   ]
+  [   |   |   ]
+  [   |   |   ]
+
+  S = Sugar Cane
+
+------------------------------
+
+RECIPE: TNT
+
+  [ G | S | G ]
+  [ S | G | S ]
+  [ G | S | G ]
+
+  G = Gunpowder
+  S = Sand
+
+------------------------------
+
+RECIPE: Torch x4
+
+  [ C |   |   ]
+  [ S |   |   ]
+  [   |   |   ]
+
+  C = Coal
+  S = Stick
+
+------------------------------
+
+RECIPE: Torch x4
+
+  [ C |   |   ]
+  [ S |   |   ]
+  [   |   |   ]
+
+  C = Coal
+  S = Stick
+
+------------------------------
+
+RECIPE: Wooden Door
+
+  [ W | W |   ]
+  [ W | W |   ]
+  [ W | W |   ]
+
+  W = Wooden Planks
+
+------------------------------
+
+RECIPE: Wooden Planks x4
+
+  [ L |   |   ]
+  [   |   |   ]
+  [   |   |   ]
+
+  L = Log
+
+------------------------------
+
+RECIPE: Wooden Stairs x4
+
+  [ W |   |   ]
+  [ W | W |   ]
+  [ W | W | W ]
+
+  W = Wooden Planks
+
+------------------------------
+
+RECIPE: Wool
+
+  [ S | S | S ]
+  [ S | S | S ]
+  [ S | S | S ]
+
+  S = String
+
+=========================
+
+SHAPELESS RECIPES (16)
+-------------------------
+
+RECIPE: Cyan Dye x2
+Ingredients (shapeless - any order):
+  • Blue Dye
+  • Green Dye
+
+------------------------------
+
+RECIPE: Gray Dye x2
+Ingredients (shapeless - any order):
+  • Black Dye
+  • White Dye
+
+------------------------------
+
+RECIPE: Light Blue Dye x2
+Ingredients (shapeless - any order):
+  • Blue Dye
+  • White Dye
+
+------------------------------
+
+RECIPE: Light Gray Dye x2
+Ingredients (shapeless - any order):
+  • Gray Dye
+  • White Dye
+
+------------------------------
+
+RECIPE: Light Gray Dye x3
+Ingredients (shapeless - any order):
+  • Black Dye
+  • White Dye
+  • White Dye
+
+------------------------------
+
+RECIPE: Lime Dye x2
+Ingredients (shapeless - any order):
+  • Green Dye
+  • White Dye
+
+------------------------------
+
+RECIPE: Magenta Dye x2
+Ingredients (shapeless - any order):
+  • Purple Dye
+  • Pink Dye
+
+------------------------------
+
+RECIPE: Magenta Dye x3
+Ingredients (shapeless - any order):
+  • Blue Dye
+  • Red Dye
+  • Pink Dye
+
+------------------------------
+
+RECIPE: Magenta Dye x4
+Ingredients (shapeless - any order):
+  • Blue Dye
+  • Red Dye
+  • Red Dye
+  • White Dye
+
+------------------------------
+
+RECIPE: Orange Dye x2
+Ingredients (shapeless - any order):
+  • Red Dye
+  • Yellow Dye
+
+------------------------------
+
+RECIPE: Pink Dye x2
+Ingredients (shapeless - any order):
+  • Red Dye
+  • White Dye
+
+------------------------------
+
+RECIPE: Purple Dye x2
+Ingredients (shapeless - any order):
+  • Blue Dye
+  • Red Dye
+
+------------------------------
+
+RECIPE: Red Dye x2
+Ingredients (shapeless - any order):
+  • Rose
+
+------------------------------
+
+RECIPE: White Dye x3
+Ingredients (shapeless - any order):
+  • Bone
+
+------------------------------
+
+RECIPE: Wool (Dyed)
+Ingredients (shapeless - any order):
+  • Wool
+  • Dye
+
+------------------------------
+
+RECIPE: Yellow Dye x2
+Ingredients (shapeless - any order):
+  • Dandelion
+
+=========================
+
+SMELTING RECIPES (10)
+-------------------------
+
+SMELTING: Clay → Brick
+
+------------------------------
+
+SMELTING: Log → Coal
+
+------------------------------
+
+SMELTING: Raw Fish → Cooked Fish
+
+------------------------------
+
+SMELTING: Raw Porkchop → Cooked Porkchop
+
+------------------------------
+
+SMELTING: Diamond Ore → Diamond
+
+------------------------------
+
+SMELTING: Cactus → Dye
+
+------------------------------
+
+SMELTING: Sand → Glass
+
+------------------------------
+
+SMELTING: Gold Ore → Gold Ingot
+
+------------------------------
+
+SMELTING: Iron Ore → Iron Ingot
+
+------------------------------
+
+SMELTING: Cobblestone → Stone
+
+=========================
